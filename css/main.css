@@ -8,6 +8,9 @@
 html {
   font-size: 62.5%; }
 
+body {
+  overflow-x: hidden; }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -37,7 +40,7 @@ html {
     transform: translateY(0%); }
   .header-logo {
     position: relative;
-    z-index: 2; }
+    z-index: 6; }
   .header-hamburger {
     outline: none;
     border: none;
@@ -45,22 +48,26 @@ html {
     height: 16px;
     background: none;
     position: relative;
-    z-index: 2; }
+    z-index: 6;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     .header-hamburger .line {
-      width: 100%;
+      width: 18px;
       height: 3px;
       background-color: #000;
       transition: all .5s;
       position: absolute; }
     .header-hamburger .line1 {
-      top: 0px; }
+      top: 12px; }
     .header-hamburger .line2,
     .header-hamburger .line3 {
       height: 3px;
       top: 50%;
       transform: translateY(-50%); }
     .header-hamburger .line4 {
-      bottom: 0; }
+      bottom: 12px; }
   .header-nav {
     position: absolute;
     left: 0;
@@ -73,7 +80,8 @@ html {
     flex-direction: column;
     align-items: center;
     transition: transform .5s;
-    transform: translateY(-100%); }
+    transform: translateY(-100%);
+    z-index: 5; }
     .header-nav-list {
       width: 80%;
       max-width: 40rem;
@@ -127,30 +135,82 @@ html {
       .header-nav-social a:nth-last-child(1) {
         margin-left: 4rem; }
 
-.intro-wrapper {
-  width: 80%;
-  margin-top: 4rem;
-  margin: 0 auto; }
-
-.intro-img-wrapper {
-  width: 100%;
-  object-fit: cover;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .intro-img-wrapper img {
+.intro {
+  position: relative; }
+  .intro::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 50vw;
+    max-height: 28rem;
+    border-radius: 15rem 0 0 15rem;
+    right: 0%;
+    top: 16%;
+    background-color: #5368df; }
+  .intro-wrapper {
     width: 100%;
-    object-fit: cover;
+    padding-top: 4rem;
+    margin: 0 auto; }
+  .intro-img-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/images/); }
+    .intro-img-wrapper img {
+      width: 100%;
+      object-fit: cover;
+      max-width: 50rem; }
+  .intro-content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin: 5.5rem auto 0rem;
     max-width: 45rem; }
-
-.intro-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .intro-content .intro-header {
-    font-size: 2.4rem;
-    color: #252b46;
+    .intro-content .intro-header {
+      font-size: 2.8rem;
+      color: #252b46;
+      text-align: center;
+      line-height: 3.6rem;
+      font-weight: 500; }
+    .intro-content .intro-desc {
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+      color: #9194a1;
+      text-align: center;
+      line-height: 2.6rem; }
+  .intro-btn-wrapper {
+    width: 100%;
     text-align: center;
-    line-height: 3.6rem;
-    font-weight: 500; }
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center; }
+    .intro-btn-wrapper button {
+      border: none;
+      outline: none;
+      padding: 1.5rem 1.7rem;
+      border-radius: 7px;
+      border: 2px solid transparent;
+      transition: all .3s;
+      cursor: pointer; }
+    .intro-btn-wrapper .chrome-btn {
+      color: #fff;
+      background: #5368df;
+      margin-right: 1rem;
+      box-shadow: 0px 8px 5px -3px rgba(0, 0, 255, 0.2); }
+      .intro-btn-wrapper .chrome-btn:hover {
+        border: 2px solid #5368df;
+        background: #fff;
+        color: #5368df;
+        box-shadow: 0px -8px 5px -3px rgba(0, 20, 255, 0.2); }
+    .intro-btn-wrapper .firefox-btn {
+      background: rgba(145, 148, 161, 0.1);
+      box-shadow: 0px 8px 8px -3px rgba(0, 0, 0, 0.2); }
+      .intro-btn-wrapper .firefox-btn:hover {
+        border: 2px solid #252b46;
+        box-shadow: 0px -8px 8px -3px rgba(0, 0, 0, 0.2); }
