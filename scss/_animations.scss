@@ -1,0 +1,29 @@
+@keyframes swipeIn{
+    from{
+        transform: translateX(-120%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes swipeOut{
+    to {
+        transform: translateX(-120%);
+        opacity: 0;
+    }
+}
+
+@keyframes beVisible{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes beHidden {
+    to {
+        opacity: 0;;
+    }
+}
