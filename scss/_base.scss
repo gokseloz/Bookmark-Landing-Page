@@ -4,6 +4,7 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    list-style: none;
 }
 
 $soft-blue: hsl(231, 69%, 60%);
@@ -15,8 +16,23 @@ $rubik:'Rubik', sans-serif;
 
 html{
     font-size: 62.5%;
+    background: radial-gradient(circle at center, );
 }
 
 body{
     overflow-x: hidden;
+    
+    &.scrollDisabled{
+        overflow-y: hidden;
+    }
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 7px;
+    border: 2px solid transparent;
+    transition: all .3s;
+    cursor: pointer;
 }
