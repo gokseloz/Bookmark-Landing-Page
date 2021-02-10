@@ -1,7 +1,7 @@
-// document.querySelector(".header-hamburger").addEventListener("click", () => {
-//     document.querySelector(".header").classList.toggle("nav-active")
-//     document.querySelector("body").classList.toggle("scrollDisabled")
-// })
+document.querySelector(".header-hamburger").addEventListener("click", () => {
+    document.querySelector(".header").classList.toggle("nav-active")
+    document.querySelector("body").classList.toggle("scrollDisabled")
+})
 
 let feature = [{
         imgSrc: './images/illustration-features-tab-1.svg',

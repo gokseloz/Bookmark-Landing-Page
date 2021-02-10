@@ -16,7 +16,6 @@ $rubik:'Rubik', sans-serif;
 
 html{
     font-size: 62.5%;
-    background: radial-gradient(circle at center, );
 }
 
 body{
@@ -24,6 +23,10 @@ body{
     
     &.scrollDisabled{
         overflow-y: hidden;
+
+        @media (min-width:800px){
+            overflow-y: auto;
+        }
     }
 }
 
