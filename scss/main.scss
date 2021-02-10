@@ -460,15 +460,15 @@
 
         .download-card {
             margin-bottom: 4rem;
-            width: 28rem ;
+            width: 28rem;
             display: flex;
             flex-direction: column;
             align-items: center;
-            box-shadow: 0px 12px 12px rgba($very-dark-blue, .1);
+            box-shadow: 0px 12px 12px 2px rgba($very-dark-blue, .1);
             border-radius: 1rem;
             padding-top: 4rem;
             padding-bottom: 2.5rem;
-            
+
 
             .card-img {
                 margin-bottom: 3rem;
@@ -485,7 +485,7 @@
                 color: hsl(229, 8%, 60%);
             }
 
-            .card-dots{
+            .card-dots {
                 margin-top: 3rem;
             }
 
@@ -505,5 +505,114 @@
                 border-radius: .7rem;
             }
         }
+    }
+}
+
+.faqs {
+    display: flex;
+    justify-content: center;
+
+    &-wrapper {
+        padding-top: 4rem;
+        padding-bottom: 8rem;
+        width: 85%;
+        max-width: 45rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &-header {
+        font-size: 2.4rem;
+        color: $very-dark-blue;
+        font-weight: 500;
+        letter-spacing: -0.05px;
+    }
+
+    &-desc {
+        margin-top: 1.2rem;
+        font-size: 1.5rem;
+        color: hsl(229, 8%, 60%);
+        line-height: 2.6rem;
+    }
+
+    &-QA {
+        width: 100%;
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        details {
+            padding-top: 2rem;
+            border-bottom: 1px solid $grayish-blue;
+            width: 100%;
+            transition: height 1s;
+        }
+
+        
+
+        details[open] {
+
+            .faqs-question{
+                color: $soft-red;
+            }
+
+            .faqs-question ~ * {
+                animation: sweep .5s ease-in-out;
+            }
+
+            .faqs-arrow {
+                transform: rotateZ(180deg);
+
+                path {
+                    stroke: $soft-red;
+                }
+            }
+        }
+
+        .faqs-arrow {
+            transition: transform .5s;
+
+            path {
+                transition: all .5s;
+            }
+        }
+
+        .faqs-question {
+            font-size: 1.5rem;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-weight: 500;
+            padding-bottom: 2rem;
+            color: $very-dark-blue;
+            text-align: start;
+            outline: none;
+            transition: color .5s;
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+        }
+
+        .faqs-answer {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            color: hsl(229, 8%, 60%);
+            text-align: start;
+            padding-bottom: 2rem;
+        }
+    }
+
+    &-btn {
+        color: #fff;
+        background: hsl(231, 69%, 60%);
+        margin-right: 1rem;
+        box-shadow: 0px 8px 5px -3px rgba(0, 0, 255, .2);
+        padding: 1.5rem 3rem;
     }
 }
