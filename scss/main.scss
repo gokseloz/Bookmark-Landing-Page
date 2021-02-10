@@ -616,3 +616,109 @@
         padding: 1.5rem 3rem;
     }
 }
+
+.register{
+    display: flex;
+    justify-content: center;
+    background-color: hsl(231, 69%, 60%);;
+
+    &-wrapper{
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+        width: 85%;
+        max-width: 45rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    &-info{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: #fff;
+    }
+
+    &-header{
+        font-size: 2.4rem;
+        font-weight: 400;
+        color: #fff;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+
+    }
+
+    &-form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+
+        
+
+        .form-input{
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 1.8rem;
+            font-size: 1.4rem;
+            border-radius: 5px;
+            z-index: 2;
+
+            &::placeholder{
+                opacity: .5;
+            }
+
+            
+        }
+
+        .form-warning{
+            display: none;
+            width: 100%;
+            color: #fff;
+            text-align: start;
+            padding: 1.7rem 1rem 1rem 1rem;
+            font-size: 1.2rem;
+            font-style: italic;
+            background-color: $soft-red;
+            border-radius: 5px;
+            margin-top: -10px;
+        }
+
+        .form-success{
+            width: 100%;
+            display: none;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: rgba(#28a745, .7);
+            border-radius: 5px;
+            margin-top: -10px;
+            font-style: italic;
+            padding: 1.7rem 1rem 1rem 1rem;
+            text-align: start;
+        }
+
+        .form-error{
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-top: 26px;
+            transform: translateY(-50%);
+            margin-right: 15px;
+            z-index:2;
+        }
+
+        .form-btn{
+            padding: 1.8rem;
+            color: #fff;
+            font-size: 1.4rem;
+            background-color: $soft-red;
+            margin-top: 2rem;
+            border-radius: 5px;
+            border: none;
+        }
+    }
+}

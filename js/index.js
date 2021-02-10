@@ -1,7 +1,7 @@
-document.querySelector(".header-hamburger").addEventListener("click", () => {
-    document.querySelector(".header").classList.toggle("nav-active")
-    document.querySelector("body").classList.toggle("scrollDisabled")
-})
+// document.querySelector(".header-hamburger").addEventListener("click", () => {
+//     document.querySelector(".header").classList.toggle("nav-active")
+//     document.querySelector("body").classList.toggle("scrollDisabled")
+// })
 
 let feature = [{
         imgSrc: './images/illustration-features-tab-1.svg',
@@ -32,14 +32,10 @@ function changeTab(index) {
 
     document.querySelector(".feature-imgWrapper").classList.add("animAdded")
     document.querySelector(".feature-textWrapper").classList.add("animAdded")
-    // document.querySelector(".features-feature").classList.add("animAdded")
 
     setTimeout(() => {
         document.querySelector(".feature-imgWrapper").classList.remove("animAdded")
         document.querySelector(".feature-textWrapper").classList.remove("animAdded")
-        // document.querySelector(".features-feature").classList.remove("animAdded")
-
-
     }, 1000);
 
     setTimeout(() => {
@@ -58,3 +54,34 @@ tabButtons.forEach((tab) => {
         changeTab([...tabButtons].indexOf(tab))
     })
 });
+
+
+document.querySelector(".register-form").addEventListener("submit", (e) => {
+    if (document.querySelector(".form-input").value == "") {
+        e.preventDefault()
+        notSubmit()
+    } else {
+        e.preventDefault();
+        document.querySelector(".form-success").style.display = "block"
+        document.querySelector(".form-input").style.border = "none"
+        document.querySelector(".form-input").value = ""
+        document.querySelector(".form-warning").style.display = "none"
+        document.querySelector(".form-error").style.display = "none"
+
+        setTimeout(() => {
+            document.querySelector(".form-success").style.display = "none"
+        }, 1500);
+    }
+})
+
+document.querySelector(".form-input").addEventListener("invalid", (e) => {
+    e.preventDefault()
+    notSubmit()
+})
+
+function notSubmit() {
+    document.querySelector(".form-input").style.border = "2px solid hsl(0, 94%, 66%)"
+    document.querySelector(".form-warning").style.display = "block"
+    document.querySelector(".form-error").style.display = "block"
+    document.querySelector(".form-success").style.display = "none"
+}
