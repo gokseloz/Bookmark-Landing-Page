@@ -1016,7 +1016,6 @@
 
             @media (min-width:550px) {
                 margin-top: 0;
-                // margin-left: 2rem;
                 width: 32%;
             }
         }
@@ -1037,12 +1036,30 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+
+        @media (min-width:750px) {
+            flex-direction: row;
+            justify-content: unset;
+            max-width: 120rem;
+        }
+    }
+
+    &-logo {
+        flex: 1;
     }
 
     &-nav-list {
         width: 80%;
         max-width: 40rem;
         margin-top: 1.5rem;
+
+        @media (min-width:750px) {
+            display: flex;
+            flex-direction: row;
+            margin-top: 0;
+            flex: 3;
+            max-width: none;
+        }
 
         .nav-link {
             display: flex;
@@ -1056,6 +1073,11 @@
             padding-top: 2rem;
             padding-bottom: 1.5rem;
             transition: color .5s;
+
+            @media (min-width:750px) {
+                margin-right: 4rem;
+                padding: 0;
+            }
         }
     }
 
@@ -1065,6 +1087,12 @@
         justify-content: space-around;
         align-items: center;
         margin-top: 4rem;
+
+        @media (min-width:750px) {
+            margin-top: 0;
+            flex: 1;
+            justify-content: center;
+        }
 
         a {
             width: 50px;
