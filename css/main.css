@@ -25,21 +25,30 @@ body {
   border: 2px solid transparent;
   font-size: 1.4rem;
   transition: all .3s;
+  padding: 1.4rem 1.8rem;
   cursor: pointer;
   font-weight: 500; }
   .btn-blue {
     background: #5368df;
-    color: #fff; }
+    color: #fff;
+    box-shadow: 0px 8px 5px -3px rgba(0, 0, 255, 0.2); }
     .btn-blue:hover {
       background: #fff;
       color: #5368df;
       border: 2px solid #5368df; }
+    @media (min-width: 800px) {
+      .btn-blue {
+        padding: 1.5rem 2.5rem; } }
   .btn-gray {
     background: rgba(145, 148, 161, 0.1);
-    color: #9194a1; }
+    color: #9194a1;
+    box-shadow: 0px 8px 8px -3px rgba(0, 0, 0, 0.2); }
     .btn-gray:hover {
       border: 2px solid #252b46;
       background: #fff; }
+    @media (min-width: 800px) {
+      .btn-gray {
+        padding: 1.5rem 2.5rem; } }
 
 .paragraph {
   color: #9194a1;
@@ -409,29 +418,7 @@ body {
           text-align: start;
           margin-left: 0; } }
       .intro-content .intro-btn-wrapper .chrome-btn {
-        color: #fff;
-        background: #5368df;
-        margin-right: 1.5rem;
-        box-shadow: 0px 8px 5px -3px rgba(0, 0, 255, 0.2);
-        padding: 1.2rem 1.5rem; }
-        @media (min-width: 800px) {
-          .intro-content .intro-btn-wrapper .chrome-btn {
-            padding: 1.5rem 2.5rem; } }
-        .intro-content .intro-btn-wrapper .chrome-btn:hover {
-          border: 2px solid #5368df;
-          background: #fff;
-          color: #5368df; }
-      .intro-content .intro-btn-wrapper .firefox-btn {
-        background: rgba(145, 148, 161, 0.1);
-        box-shadow: 0px 8px 8px -3px rgba(0, 0, 0, 0.2);
-        padding: 1.2rem 1.5rem;
-        color: #9194a1; }
-        @media (min-width: 800px) {
-          .intro-content .intro-btn-wrapper .firefox-btn {
-            padding: 1.5rem 2.5rem; } }
-        .intro-content .intro-btn-wrapper .firefox-btn:hover {
-          border: 2px solid #252b46;
-          background: #fff; }
+        margin-right: 1.5rem; }
 
 .features {
   display: flex;
@@ -475,6 +462,7 @@ body {
       padding-bottom: 1.5rem;
       border-top: 1px solid rgba(145, 148, 161, 0.4);
       color: #9194a1;
+      cursor: pointer;
       position: relative;
       transition: color .3s; }
       @media (min-width: 800px) {
@@ -595,19 +583,7 @@ body {
       .features-feature .feature-textWrapper.animAdded {
         animation: beHidden .8s linear forwards; }
       .features-feature .feature-textWrapper .feature-btn {
-        color: #fff;
-        background: #5368df;
-        margin-right: 1rem;
-        margin-top: 2rem;
-        box-shadow: 0px 8px 5px -3px rgba(0, 0, 255, 0.2);
-        padding: 1.5rem 3rem;
-        border: 2px solid #5368df; }
-        .features-feature .feature-textWrapper .feature-btn:hover {
-          background: #fff;
-          color: #5368df; }
-        @media (min-width: 800px) {
-          .features-feature .feature-textWrapper .feature-btn {
-            margin-top: 2.4rem; } }
+        margin-top: 2rem; }
 
 .downloads {
   display: flex;
@@ -669,30 +645,17 @@ body {
       .downloads-cards-wrapper .download-card .card-dots {
         margin-top: 3rem; }
       .downloads-cards-wrapper .download-card .card-btn {
-        outline: none;
         width: 85%;
-        border: 2px solid #fff;
-        color: #fff;
-        padding: 1.8rem;
+        padding: 1.4rem 1.6rem;
         margin-top: 2.5rem;
-        border-radius: 5px;
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        background: #5368df;
-        border: 2px solid #5368df;
-        transition: all .5s;
-        border-radius: .7rem;
-        font-weight: 500; }
-        .downloads-cards-wrapper .download-card .card-btn:hover {
-          background: #fff;
-          color: #5368df; }
+        letter-spacing: .5px; }
 
 .faqs {
   display: flex;
   justify-content: center; }
   .faqs-wrapper {
     padding-top: 4rem;
-    padding-bottom: 8rem;
+    padding-bottom: 12rem;
     width: 85%;
     max-width: 55rem;
     display: flex;
@@ -705,14 +668,15 @@ body {
   .faqs-QA {
     width: 100%;
     margin-top: 4rem;
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start; }
     .faqs-QA details {
-      padding-top: 2rem;
-      border-bottom: 1px solid #9194a1;
+      border-bottom: 1px solid rgba(145, 148, 161, 0.2);
       width: 100%; }
+    .faqs-QA details:first-child {
+      border-top: 1px solid rgba(145, 148, 161, 0.2); }
     .faqs-QA details[open] .faqs-question {
       color: #fa5757; }
     .faqs-QA details[open] .faqs-question ~ * {
@@ -732,24 +696,17 @@ body {
       flex-direction: row;
       justify-content: space-between;
       font-weight: 500;
+      padding-top: 2rem;
       padding-bottom: 2rem;
       color: #252b46;
       text-align: left;
       outline: none;
-      transition: color .5s;
+      transition: color .3s;
       cursor: pointer; }
+      .faqs-QA .faqs-question:hover {
+        color: #fa5757; }
       .faqs-QA .faqs-question::-webkit-details-marker {
         display: none; }
-  .faqs-btn {
-    color: #fff;
-    background: #5368df;
-    margin-right: 1rem;
-    box-shadow: 0px 8px 5px -3px rgba(0, 0, 255, 0.2);
-    padding: 1.5rem 3rem;
-    border: 2px solid #5368df; }
-    .faqs-btn:hover {
-      background: #fff;
-      color: #5368df; }
 
 .register {
   display: flex;
