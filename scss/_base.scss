@@ -17,28 +17,52 @@ sans-serif;
 
 html {
     font-size: 62.5%;
+    height: -webkit-fill-available;
 }
 
 body {
     overflow-x: hidden;
 
     &.scrollDisabled {
-        overflow-y: hidden;
+        overflow: hidden;
 
         @media (min-width:800px) {
-            overflow-y: auto;
+            overflow: auto;
         }
     }
 }
 
+
 .btn {
-    border: none;
     outline: none;
     background: none;
-    border-radius: 7px;
+    border-radius: 5px;
     border: 2px solid transparent;
+    font-size: 1.4rem;
     transition: all .3s;
     cursor: pointer;
+    font-weight: 500;
+
+    &-blue {
+        background: hsl(231, 69%, 60%);
+        color: #fff;
+
+        &:hover {
+            background: #fff;
+            color: hsl(231, 69%, 60%);
+            border: 2px solid hsl(231, 69%, 60%);
+        }
+    }
+
+    &-gray {
+        background: rgba($grayish-blue, .1);
+        color: $grayish-blue;
+
+        &:hover {
+            border: 2px solid hsl(229, 31%, 21%);
+            background: #fff;
+        }
+    }
 }
 
 .paragraph {
@@ -66,7 +90,7 @@ body {
             margin: 0 auto;
             margin-top: 2rem;
             font-size: 1.8rem;
-        } 
+        }
     }
 
     &-tertiary {

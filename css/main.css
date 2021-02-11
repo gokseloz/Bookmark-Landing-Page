@@ -7,24 +7,39 @@
   list-style: none; }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: -webkit-fill-available; }
 
 body {
   overflow-x: hidden; }
   body.scrollDisabled {
-    overflow-y: hidden; }
+    overflow: hidden; }
     @media (min-width: 800px) {
       body.scrollDisabled {
-        overflow-y: auto; } }
+        overflow: auto; } }
 
 .btn {
-  border: none;
   outline: none;
   background: none;
-  border-radius: 7px;
+  border-radius: 5px;
   border: 2px solid transparent;
+  font-size: 1.4rem;
   transition: all .3s;
-  cursor: pointer; }
+  cursor: pointer;
+  font-weight: 500; }
+  .btn-blue {
+    background: #5368df;
+    color: #fff; }
+    .btn-blue:hover {
+      background: #fff;
+      color: #5368df;
+      border: 2px solid #5368df; }
+  .btn-gray {
+    background: rgba(145, 148, 161, 0.1);
+    color: #9194a1; }
+    .btn-gray:hover {
+      border: 2px solid #252b46;
+      background: #fff; }
 
 .paragraph {
   color: #9194a1;
@@ -191,6 +206,7 @@ body {
     top: 0;
     padding-top: 10rem;
     height: 100vh;
+    min-height: 0vh;
     background-color: rgba(37, 43, 70, 0.8);
     display: flex;
     flex-direction: column;
@@ -265,15 +281,14 @@ body {
           @media (min-width: 800px) {
             .header-nav-list .nav-link:nth-last-child(1) {
               border-bottom: none; } }
-    .header-nav-btn {
-      outline: none;
+    .header-nav .header-login-link {
       width: 80%;
       max-width: 40rem;
       border: 2px solid #fff;
       color: #fff;
       padding: 1rem;
+      text-align: center;
       margin-top: 2.5rem;
-      border-radius: 5px;
       text-transform: uppercase;
       font-size: 1.8rem;
       letter-spacing: 2px;
@@ -281,17 +296,17 @@ body {
       cursor: pointer;
       transition: all .5s; }
       @media (min-width: 800px) {
-        .header-nav-btn {
+        .header-nav .header-login-link {
           margin-top: 0;
           background-color: #fa5757;
           padding: 1rem 3rem;
           font-size: 1.4rem;
           border: 2px solid #fa5757;
           box-shadow: 0px 10px 5px -3px rgba(0, 0, 0, 0.1); } }
-      .header-nav-btn:hover {
+      .header-nav .header-login-link:hover {
         border: 2px solid #fa5757; }
         @media (min-width: 800px) {
-          .header-nav-btn:hover {
+          .header-nav .header-login-link:hover {
             background-color: #fff;
             color: #fa5757; } }
     .header-nav-social {
@@ -409,7 +424,8 @@ body {
       .intro-content .intro-btn-wrapper .firefox-btn {
         background: rgba(145, 148, 161, 0.1);
         box-shadow: 0px 8px 8px -3px rgba(0, 0, 0, 0.2);
-        padding: 1.2rem 1.5rem; }
+        padding: 1.2rem 1.5rem;
+        color: #9194a1; }
         @media (min-width: 800px) {
           .intro-content .intro-btn-wrapper .firefox-btn {
             padding: 1.5rem 2.5rem; } }
@@ -750,7 +766,7 @@ body {
     text-align: center; }
     @media (min-width: 800px) {
       .register-wrapper {
-        max-width: 45rem; } }
+        max-width: 55rem; } }
   .register-info {
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -775,10 +791,9 @@ body {
         flex-direction: row;
         justify-content: space-between; } }
     .register-form .form-input {
-      width: 100%;
       outline: none;
       border: none;
-      padding: 1.8rem;
+      padding: 1.6rem;
       font-size: 1.4rem;
       border-radius: 5px;
       z-index: 2;
@@ -788,6 +803,22 @@ body {
           width: 65%; } }
       .register-form .form-input::placeholder {
         opacity: .5; }
+    .register-form .form-btn {
+      padding: 1.6rem;
+      color: #fff;
+      font-size: 1.4rem;
+      background-color: #fa5757;
+      margin-top: 2rem;
+      border-radius: 5px;
+      transition: all .5s; }
+      @media (min-width: 550px) {
+        .register-form .form-btn {
+          margin-top: 0;
+          width: 32%; } }
+      .register-form .form-btn:hover {
+        background: #fff;
+        color: #fa5757;
+        border: 2px solid #fa5757; }
     .register-form .form-warning {
       display: none;
       width: 100%;
@@ -832,19 +863,6 @@ body {
       @media (min-width: 550px) {
         .register-form .form-error {
           left: 58%; } }
-    .register-form .form-btn {
-      padding: 1.8rem;
-      color: #fff;
-      font-size: 1.4rem;
-      background-color: #fa5757;
-      margin-top: 2rem;
-      border-radius: 5px;
-      border: none;
-      transition: all .5s; }
-      @media (min-width: 550px) {
-        .register-form .form-btn {
-          margin-top: 0;
-          width: 32%; } }
 
 .footer {
   display: flex;
