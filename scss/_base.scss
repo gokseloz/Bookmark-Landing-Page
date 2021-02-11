@@ -41,6 +41,41 @@ body {
     cursor: pointer;
 }
 
+.paragraph {
+    color: hsl(229, 8%, 60%);
+    line-height: 2.8rem;
+    font-size: 1.5rem;
+
+    &-primary {
+        margin-top: 1.5rem;
+        text-align: center;
+
+        @media (min-width:800px) {
+            margin-top: 2rem;
+            text-align: left;
+            font-size: 1.8rem;
+        }
+    }
+
+    &-secondary {
+        margin-top: 1.2rem;
+        font-size: 1.5rem;
+
+        @media (min-width:800px) {
+            max-width: 55rem;
+            margin: 0 auto;
+            margin-top: 2rem;
+            font-size: 1.8rem;
+        } 
+    }
+
+    &-tertiary {
+        font-size: 1.5rem;
+        text-align: left;
+        padding-bottom: 2rem;
+    }
+}
+
 
 .heading {
     font-weight: 500;
