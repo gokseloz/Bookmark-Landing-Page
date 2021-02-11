@@ -63,13 +63,14 @@ document.querySelector(".register-form").addEventListener("submit", (e) => {
     } else {
         e.preventDefault();
         document.querySelector(".form-success").style.display = "block"
-        document.querySelector(".form-input").style.border = "none"
+        document.querySelector(".form-input").style.border = "2px solid #28a745"
         document.querySelector(".form-input").value = ""
         document.querySelector(".form-warning").style.display = "none"
         document.querySelector(".form-error").style.display = "none"
 
         setTimeout(() => {
             document.querySelector(".form-success").style.display = "none"
+            document.querySelector(".form-input").style.border = "none"
         }, 1500);
     }
 })

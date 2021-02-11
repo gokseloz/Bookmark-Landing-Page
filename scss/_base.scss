@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -12,19 +12,20 @@ $soft-red: hsl(0, 94%, 66%);
 $grayish-blue: hsl(229, 8%, 60%);
 $very-dark-blue: hsl(229, 31%, 21%);
 
-$rubik:'Rubik', sans-serif;
+$rubik:'Rubik',
+sans-serif;
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     overflow-x: hidden;
-    
-    &.scrollDisabled{
+
+    &.scrollDisabled {
         overflow-y: hidden;
 
-        @media (min-width:800px){
+        @media (min-width:800px) {
             overflow-y: auto;
         }
     }
@@ -38,4 +39,37 @@ body{
     border: 2px solid transparent;
     transition: all .3s;
     cursor: pointer;
+}
+
+
+.heading {
+    font-weight: 500;
+
+    &-primary {
+        font-size: 2.8rem;
+        color: $very-dark-blue;
+        text-align: center;
+        line-height: 3.6rem;
+
+        @media (min-width:800px) {
+            font-size: 4.4rem;
+            text-align: left;
+            line-height: 4.8rem;
+            letter-spacing: -.5px;
+        }
+
+        @media (min-width:1040px) {
+            font-size: 4.8rem;
+        }
+    }
+
+    &-secondary {
+        font-size: 2.4rem;
+        color: $very-dark-blue;
+        letter-spacing: -.5px;
+
+        @media (min-width:800px) {
+            font-size: 3.2rem;
+        }
+    }
 }
