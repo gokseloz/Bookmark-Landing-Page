@@ -7,14 +7,14 @@
         padding-top: 8rem;
         padding-bottom: 6rem;
         width: 85%;
-        max-width: 60rem;
+        max-width: 40rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
 
         @media (min-width:800px) {
-            max-width: 55rem;
+            max-width: 50rem;
         }
     }
 
@@ -29,11 +29,11 @@
         font-size: 2.4rem;
         font-weight: 500;
         color: #fff;
-        margin-top: 2rem;
+        margin-top: 4rem;
         margin-bottom: 4rem;
 
         @media (min-width:800px) {
-            font-size: 4rem;
+            font-size: 3.4rem;
         }
     }
 
@@ -87,7 +87,7 @@
             }
         }
 
-        .form-warning {
+        .form-warning-text {
             display: none;
             width: 100%;
             color: #fff;
@@ -106,7 +106,7 @@
             }
         }
 
-        .form-success {
+        .form-success-text {
             width: 100%;
             display: none;
             font-size: 1.2rem;
@@ -139,7 +139,5 @@
                 left: 58%;
             }
         }
-
-
     }
 }

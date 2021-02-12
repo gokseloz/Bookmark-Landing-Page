@@ -133,7 +133,7 @@ body {
   box-shadow: 0px 12px 12px 2px rgba(37, 43, 70, 0.1);
   border-radius: 1rem;
   padding-top: 4rem;
-  padding-bottom: 2.5rem; }
+  padding-bottom: 3rem; }
   .download-card .card-img {
     margin-bottom: 3rem; }
   .download-card .card-heading {
@@ -517,9 +517,10 @@ body {
     @media (min-width: 800px) {
       .features-feature {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: flex-start;
         margin-top: 6rem;
+        margin-right: 6rem;
         height: 40rem; } }
     .features-feature::before {
       z-index: -1;
@@ -535,13 +536,13 @@ body {
       @media (min-width: 800px) {
         .features-feature::before {
           width: 100%;
-          height: 33rem;
+          height: 32rem;
+          max-height: none;
           left: -70%;
           top: 8rem; } }
       @media (min-width: 1200px) {
         .features-feature::before {
-          left: -58%;
-          top: 8rem; } }
+          left: -54%; } }
     .features-feature .feature-imgWrapper {
       width: 100%;
       height: 75vw;
@@ -549,30 +550,24 @@ body {
       animation: swipeIn .8s ease-out; }
       @media (min-width: 800px) {
         .features-feature .feature-imgWrapper {
-          width: 45rem;
+          width: 55rem;
           height: auto;
           max-height: none;
           display: flex;
           justify-content: center;
           align-items: flex-start;
-          margin-left: -20rem; } }
-      @media (min-width: 1000px) {
-        .features-feature .feature-imgWrapper {
-          margin-left: -10rem; } }
-      @media (min-width: 1200px) {
-        .features-feature .feature-imgWrapper {
-          margin-left: 0; } }
+          margin-right: 2rem; } }
       .features-feature .feature-imgWrapper.animAdded {
         animation: swipeOut .8s ease-out forwards; }
-      .features-feature .feature-imgWrapper img {
+      .features-feature .feature-imgWrapper .feature-img {
         width: 100%;
-        object-fit: cover;
-        max-width: 45rem; }
+        max-width: 45rem;
+        object-fit: cover; }
         @media (min-width: 800px) {
-          .features-feature .feature-imgWrapper img {
+          .features-feature .feature-imgWrapper .feature-img {
+            width: 60rem;
+            max-width: 60rem;
             transform-origin: right;
-            width: 55rem;
-            max-width: 55rem;
             padding-right: 6rem; } }
     .features-feature .feature-textWrapper {
       animation: beVisible .8s linear;
@@ -580,17 +575,12 @@ body {
       @media (min-width: 800px) {
         .features-feature .feature-textWrapper {
           text-align: left;
-          padding-top: 6rem;
-          width: 55rem;
-          min-width: 55rem;
-          padding-left: 6rem;
-          padding-right: 4rem;
-          padding-bottom: 6rem; } }
-      @media (min-width: 1000px) {
+          padding: 6rem 0rem;
+          min-width: 40rem;
+          max-width: 50rem; } }
+      @media (min-width: 1200px) {
         .features-feature .feature-textWrapper {
-          padding-left: 10rem;
-          padding-right: 0rem;
-          margin-right: -12rem; } }
+          padding: 6rem 0rem 6rem 6rem; } }
       .features-feature .feature-textWrapper.animAdded {
         animation: beHidden .8s linear forwards; }
       .features-feature .feature-textWrapper .feature-btn {
@@ -629,8 +619,8 @@ body {
         flex-wrap: nowrap; } }
     @media (min-width: 800px) {
       .downloads-cards-wrapper .download-card {
-        margin-right: 1.5rem;
-        margin-left: 1.5rem; } }
+        margin-right: 1.7rem;
+        margin-left: 1.7rem; } }
     @media (min-width: 1040px) {
       .downloads-cards-wrapper .download-card:nth-child(2) {
         transform: translateY(4rem); } }
@@ -645,7 +635,7 @@ body {
     padding-top: 4rem;
     padding-bottom: 12rem;
     width: 80%;
-    max-width: 55rem;
+    max-width: 50rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -679,13 +669,13 @@ body {
         transition: all .5s; }
     .faqs-accordion .faq-question {
       outline: none;
-      font-size: 1.5rem;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      font-weight: 500;
       padding-top: 2rem;
       padding-bottom: 2rem;
+      font-size: 1.5rem;
+      font-weight: 500;
       color: #252b46;
       transition: color .3s;
       cursor: pointer; }
@@ -705,14 +695,14 @@ body {
     padding-top: 8rem;
     padding-bottom: 6rem;
     width: 85%;
-    max-width: 60rem;
+    max-width: 40rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center; }
     @media (min-width: 800px) {
       .register-wrapper {
-        max-width: 55rem; } }
+        max-width: 50rem; } }
   .register-info {
     font-size: 1.2rem;
     text-transform: uppercase;
@@ -722,11 +712,11 @@ body {
     font-size: 2.4rem;
     font-weight: 500;
     color: #fff;
-    margin-top: 2rem;
+    margin-top: 4rem;
     margin-bottom: 4rem; }
     @media (min-width: 800px) {
       .register-heading {
-        font-size: 4rem; } }
+        font-size: 3.4rem; } }
   .register-form {
     display: flex;
     flex-direction: column;
@@ -765,7 +755,7 @@ body {
         background: #fff;
         color: #fa5757;
         border: 2px solid #fa5757; }
-    .register-form .form-warning {
+    .register-form .form-warning-text {
       display: none;
       width: 100%;
       color: #fff;
@@ -777,11 +767,11 @@ body {
       border-radius: 5px;
       margin-top: -10px; }
       @media (min-width: 550px) {
-        .register-form .form-warning {
+        .register-form .form-warning-text {
           position: absolute;
           width: 65%;
           top: 100%; } }
-    .register-form .form-success {
+    .register-form .form-success-text {
       width: 100%;
       display: none;
       font-size: 1.2rem;
@@ -793,7 +783,7 @@ body {
       padding: 1.7rem 1rem 1rem 1rem;
       text-align: start; }
       @media (min-width: 550px) {
-        .register-form .form-success {
+        .register-form .form-success-text {
           position: absolute;
           width: 65%;
           top: 100%; } }

@@ -6,7 +6,7 @@
         padding-top: 4rem;
         padding-bottom: 12rem;
         width: 80%;
-        max-width: 55rem;
+        max-width: 50rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -64,13 +64,13 @@
 
         .faq-question {
             outline: none;
-            font-size: 1.5rem;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            font-weight: 500;
             padding-top: 2rem;
             padding-bottom: 2rem;
+            font-size: 1.5rem;
+            font-weight: 500;
             color: $very-dark-blue;
             transition: color .3s;
             cursor: pointer;

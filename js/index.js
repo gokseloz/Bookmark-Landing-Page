@@ -1,6 +1,14 @@
 document.querySelector(".header-hamburger").addEventListener("click", () => {
     document.querySelector(".header").classList.toggle("nav-active")
+
+    if(document.querySelector(".header").classList.contains("nav-active")){
+        document.querySelector(".header-hamburger").setAttribute("aria-expanded","true")
+    }
+    else{
+        document.querySelector(".header-hamburger").setAttribute("aria-expanded","false")
+    }
     document.querySelector("body").classList.toggle("scrollDisabled")
+
 })
 
 let feature = [{
@@ -62,10 +70,10 @@ document.querySelector(".register-form").addEventListener("submit", (e) => {
         notSubmit()
     } else {
         e.preventDefault();
-        document.querySelector(".form-success").style.display = "block"
+        document.querySelector(".form-success-text").style.display = "block"
         document.querySelector(".form-input").style.border = "2px solid #28a745"
         document.querySelector(".form-input").value = ""
-        document.querySelector(".form-warning").style.display = "none"
+        document.querySelector(".form-warning-text").style.display = "none"
         document.querySelector(".form-error").style.display = "none"
 
         setTimeout(() => {
@@ -82,7 +90,7 @@ document.querySelector(".form-input").addEventListener("invalid", (e) => {
 
 function notSubmit() {
     document.querySelector(".form-input").style.border = "2px solid hsl(0, 94%, 66%)"
-    document.querySelector(".form-warning").style.display = "block"
+    document.querySelector(".form-warning-text").style.display = "block"
     document.querySelector(".form-error").style.display = "block"
-    document.querySelector(".form-success").style.display = "none"
+    document.querySelector(".form-success-text").style.display = "none"
 }

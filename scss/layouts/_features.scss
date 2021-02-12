@@ -85,9 +85,10 @@
 
         @media (min-width:800px) {
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: flex-start;
             margin-top: 6rem;
+            margin-right: 6rem;
             height: 40rem;
         }
 
@@ -105,14 +106,14 @@
 
             @media (min-width:800px) {
                 width: 100%;
-                height: 33rem;
+                height: 32rem;
+                max-height: none;
                 left: -70%;
                 top: 8rem;
             }
 
             @media (min-width:1200px) {
-                left: -58%;
-                top: 8rem;
+                left: -54%;
             }
         }
 
@@ -123,36 +124,28 @@
             animation: swipeIn .8s ease-out;
 
             @media (min-width:800px) {
-                width: 45rem;
+                width: 55rem;
                 height: auto;
                 max-height: none;
                 display: flex;
                 justify-content: center;
                 align-items: flex-start;
-                margin-left: -20rem;
-            }
-
-            @media (min-width:1000px) {
-                margin-left: -10rem;
-            }
-
-            @media (min-width:1200px) {
-                margin-left: 0;
+                margin-right: 2rem;
             }
 
             &.animAdded {
                 animation: swipeOut .8s ease-out forwards;
             }
 
-            img {
+            .feature-img {
                 width: 100%;
-                object-fit: cover;
                 max-width: 45rem;
+                object-fit: cover;
 
                 @media (min-width:800px) {
+                    width: 60rem;
+                    max-width: 60rem;
                     transform-origin: right;
-                    width: 55rem;
-                    max-width: 55rem;
                     padding-right: 6rem;
                 }
             }
@@ -164,20 +157,14 @@
 
             @media (min-width:800px) {
                 text-align: left;
-                padding-top: 6rem;
-                width: 55rem;
-                min-width: 55rem;
-                padding-left: 6rem;
-                padding-right: 4rem;
-                padding-bottom: 6rem;
+                padding: 6rem 0rem;
+                min-width: 40rem;
+                max-width: 50rem;
             }
 
-            @media (min-width:1000px) {
-                padding-left: 10rem;
-                padding-right: 0rem;
-                margin-right: -12rem;
+            @media (min-width:1200px) {
+                padding: 6rem 0rem 6rem 6rem;
             }
-
 
             &.animAdded {
                 animation: beHidden .8s linear forwards;
