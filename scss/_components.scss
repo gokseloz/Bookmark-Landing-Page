@@ -1,0 +1,152 @@
+// ------------------
+// * HAMBURGER-ICON *
+// ------------------
+.header-hamburger {
+    outline: none;
+    border: none;
+    width: 18px;
+    height: 16px;
+    background: none;
+    position: relative;
+    z-index: 6;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width:800px) {
+        display: none;
+    }
+
+    .line {
+        width: 18px;
+        height: 3px;
+        background-color: #000;
+        transition: all .5s;
+        position: absolute;
+    }
+
+    .line1 {
+        top: 12px;
+    }
+
+    .line2,
+    .line3 {
+        height: 3px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .line4 {
+        bottom: 12px;
+    }
+}
+
+.nav-active {
+    .line1 {
+        transform: scale(0);
+        visibility: hidden;
+    }
+
+    .line2 {
+        transform: translateY(-50%) rotateZ(45deg);
+        background-color: #fff;
+    }
+
+    .line3 {
+        transform: translateY(-50%) rotateZ(-45deg);
+        background-color: #fff;
+    }
+
+    .line4 {
+        transform: scale(0);
+        visibility: hidden;
+    }
+}
+
+// -----------
+// * BUTTON *
+// -----------
+.btn {
+    outline: none;
+    background: none;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    font-size: 1.4rem;
+    transition: all .3s;
+    padding: 1.2rem 1.4rem;
+    cursor: pointer;
+
+    &-blue {
+        background: hsl(231, 69%, 60%);
+        color: #fff;
+        box-shadow: 0px 8px 5px -3px rgba(0, 0, 255, .2);
+
+        &:hover {
+            background: #fff;
+            color: hsl(231, 69%, 60%);
+            border: 2px solid hsl(231, 69%, 60%);
+        }
+
+        @media (min-width:800px) {
+            padding: 1.5rem 2.5rem;
+        }
+    }
+
+    &-gray {
+        background: rgba($grayish-blue, .1);
+        color: $grayish-blue;
+        box-shadow: 0px 8px 8px -3px rgba(#000, .2);
+
+
+        &:hover {
+            border: 2px solid hsl(229, 31%, 21%);
+            background: #fff;
+        }
+
+        @media (min-width:800px) {
+            padding: 1.5rem 2.5rem;
+        }
+    }
+}
+
+// -----------------
+// * DOWNLOAD-CARD *
+// -----------------
+.download-card {
+    width: 28rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 12px 12px 2px rgba($very-dark-blue, .1);
+    border-radius: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+
+    .card-img {
+        margin-bottom: 3rem;
+    }
+
+    .card-heading {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .card-desc {
+        margin-top: 1.2rem;
+        font-size: 1.5rem;
+        color: hsl(229, 8%, 60%);
+    }
+
+    .card-dots {
+        margin-top: 3rem;
+    }
+
+    .card-btn {
+        width: 85%;
+        padding: 1.4rem 1.6rem;
+        margin-top: 2.5rem;
+        letter-spacing: .5px;
+    }
+}
