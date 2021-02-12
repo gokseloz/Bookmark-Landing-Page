@@ -1,3 +1,9 @@
+let hamburgerIcon = document.querySelector(".header-hamburger")
+let header = document.querySelector(".header")
+let body = document.querySelector("body")
+let navLink = document.querySelectorAll(".header-nav-link")
+
+
 document.querySelector(".header-hamburger").addEventListener("click", () => {
     document.querySelector(".header").classList.toggle("nav-active")
     document.querySelector("body").classList.toggle("scrollDisabled")
@@ -20,6 +26,7 @@ document.querySelector(".header-hamburger").addEventListener("click", () => {
     
 
 })
+
 
 let feature = [{
         imgSrc: './images/illustration-features-tab-1.svg',
