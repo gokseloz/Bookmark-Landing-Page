@@ -17,9 +17,7 @@
         @media (min-width:800px) {
             width: 85%;
             max-width: 120rem;
-        }
-        @media (min-width:1300px) {
-            padding-right: 10rem;
+            padding-right: 4rem;
         }
     }
 
@@ -159,17 +157,9 @@
                 display: flex;
             }
 
-            .nav-link {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                text-transform: uppercase;
-                color: #fff;
-                font-weight: 400;
-                letter-spacing: 2px;
+            .header-nav-link {
                 font-size: 2rem;
                 padding-top: 1.5rem;
-                padding-bottom: 1.5rem;
                 border-top: 1px solid rgba($grayish-blue, .4);
                 transition: color .5s;
                 position: relative;
@@ -265,21 +255,6 @@
             @media (min-width:800px) {
                 display: none;
             }
-
-            &-link {
-                width: 5rem;
-                height: 5rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-
-            &-link:nth-last-child(1) {
-                margin-left: 2rem;
-            }
-
-
         }
     }
 }
@@ -297,17 +272,16 @@
         width: 75%;
         height: 50vw;
         max-height: 28rem;
-        border-radius: 15rem 0 0 15rem;
+        border-radius: 50rem 0 0 50rem;
         right: 0%;
         top: 16%;
         background-color: hsl(231, 69%, 60%);
 
         @media (min-width:800px) {
-            right: -35%;
-            height: 25vw;
-            top: 35%;
-            max-height: 30rem;
-
+            right: -40%;
+            max-height: none;
+            height: 35rem;
+            top: 40%;
         }
     }
 
@@ -320,10 +294,11 @@
             width: 85%;
             max-width: 120rem;
             margin-top: 6rem;
+            margin-bottom: 4rem;
             height: 50rem;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
 
     }
@@ -336,7 +311,8 @@
 
         @media (min-width:800px) {
             order: 2;
-            width: 100%;
+            min-width: 60rem;
+            margin-right: -10rem;
         }
 
         img {
@@ -345,7 +321,7 @@
             max-width: 60rem;
 
             @media (min-width:800px) {
-                width: 115%;
+                max-width: 65rem;
                 margin-top: 4rem;
             }
         }
@@ -360,12 +336,13 @@
         max-width: 60rem;
 
         @media (min-width:800px) {
-            width: auto;
+            min-width: 55rem;
             max-width: 55rem;
             margin: 0;
             padding-right: 4rem;
             align-items: flex-start;
-            
+
+
         }
 
         .intro-btn-wrapper {
@@ -606,6 +583,7 @@
 
         @media (min-width:800px) {
             max-width: 120rem;
+            margin-top: 4rem;
         }
     }
 
@@ -692,7 +670,7 @@
         padding-top: 4rem;
         padding-bottom: 12rem;
         width: 80%;
-        max-width: 60rem;
+        max-width: 55rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -706,27 +684,32 @@
 
     &-accordion {
         width: 105%;
-        margin-top: 4rem;
+        margin-top: 5rem;
         margin-bottom: 5rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
 
-        .faqs {
+        .faq {
             border-bottom: 1px solid rgba($grayish-blue, .2);
             width: 100%;
         }
 
-        .faqs[open] {
-            .faqs-question {
+        .faq:first-child {
+            border-top: 1px solid rgba($grayish-blue, .2);
+
+        }
+
+        .faq[open] {
+            .faq-question {
                 color: $soft-red;
             }
 
-            .faqs-question+.faqs-answer {
+            .faq-question+.faq-answer {
                 animation: sweep .5s ease-in-out;
             }
 
-            .faqs-arrow {
+            .faq-arrow {
                 transform: rotateZ(180deg);
 
                 path {
@@ -735,7 +718,7 @@
             }
         }
 
-        .faqs-arrow {
+        .faq-arrow {
             transition: transform .5s;
 
             path {
@@ -743,7 +726,7 @@
             }
         }
 
-        .faqs-question {
+        .faq-question {
             outline: none;
             font-size: 1.5rem;
             display: flex;
@@ -847,7 +830,7 @@
             background-color: $soft-red;
             margin-top: 2rem;
             border-radius: 5px;
-            transition: all .5s;
+            transition: all .3s;
 
             @media (min-width:550px) {
                 margin-top: 0;
@@ -934,15 +917,15 @@
         text-align: center;
 
         @media (min-width:800px) {
-            flex-direction: row;
-            justify-content: unset;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
             max-width: 120rem;
+            flex-direction: row;
         }
     }
 
     &-logo {
         width: max-content;
-
     }
 
     &-nav-list {
@@ -951,31 +934,23 @@
         margin-top: 1.5rem;
 
         @media (min-width:800px) {
+            width: auto;
+            max-width: none;
             display: flex;
             flex-direction: row;
             margin-top: 0;
-            width: auto;
             flex: 3 0 60%;
-            max-width: none;
             padding-left: 8rem;
         }
 
-        .nav-link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-transform: uppercase;
-            color: #fff;
-            font-weight: 400;
-            letter-spacing: 2px;
+        .footer-nav-link {
             font-size: 1.4rem;
             padding-top: 2rem;
-            padding-bottom: 1.5rem;
             transition: color .3s;
 
             @media (min-width:800px) {
-                margin-right: 4rem;
                 padding: 0;
+                margin-right: 4rem;
             }
 
             &:hover {
@@ -989,31 +964,12 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin-top: 4rem;
+        margin-top: 2rem;
 
         @media (min-width:800px) {
+            justify-content: center;
             margin-top: 0;
             flex: 1 0 10%;
-            justify-content: center;
-        }
-
-        a {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &:hover {
-                path {
-                    transition: all .3s;
-                    fill: $soft-red;
-                }
-            }
-        }
-
-        a:nth-last-child(1) {
-            margin-left: 2rem;
         }
     }
 }
