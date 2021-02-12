@@ -1,13 +1,23 @@
 document.querySelector(".header-hamburger").addEventListener("click", () => {
     document.querySelector(".header").classList.toggle("nav-active")
-
+    document.querySelector("body").classList.toggle("scrollDisabled")
     if(document.querySelector(".header").classList.contains("nav-active")){
         document.querySelector(".header-hamburger").setAttribute("aria-expanded","true")
+        document.querySelector(".header-hamburger").setAttribute("aria-pressed","true")
+        document.querySelectorAll(".header-nav-link").forEach((e) => {
+            e.setAttribute("tabindex", "0")
+        })
     }
     else{
         document.querySelector(".header-hamburger").setAttribute("aria-expanded","false")
+        document.querySelector(".header-hamburger").setAttribute("aria-pressed","false")
+        document.querySelectorAll(".header-nav-link").forEach((e) => {
+            e.setAttribute("tabindex", "-1")
+        })
+
+
     }
-    document.querySelector("body").classList.toggle("scrollDisabled")
+    
 
 })
 

@@ -31,7 +31,7 @@
         </svg>
       </a>
 
-      <button class="header-hamburger" aria-label="menu button">
+      <button class="header-hamburger" tabindex="0" aria-label="menu button" aria-expanded="false" aria-pressed="false" >
         <span class="line line1 "></span>
         <span class="line line2"></span>
         <span class="line line3"></span>
@@ -45,7 +45,7 @@
           <a href="#contact" class="header-nav-link nav-link" data-text="Contact">Contact</a>
         </div>
 
-        <a class="header-login-link">LOGIN</a>
+        <a class="header-login-link" tabindex="0">LOGIN</a>
 
         <div class="header-nav-social">
           <a href="#" class="nav-social-link">
@@ -104,9 +104,9 @@
       </p>
 
       <ul class="features-tabs">
-        <li class="tab tab-1 active">Simple Bookmarking</li>
-        <li class="tab tab-2">Speedy Searching</li>
-        <li class="tab tab-3">Easy Sharing</li>
+        <li class="tab tab-1 active" tabindex="0">Simple Bookmarking</li>
+        <li class="tab tab-2" tabindex="0">Speedy Searching</li>
+        <li class="tab tab-3" tabindex="0">Easy Sharing</li>
       </ul>
 
       <div class="features-feature">
@@ -142,7 +142,7 @@
           <h3 class="card-heading">Add to Chrome</h3>
           <p class="card-desc">Minimum version 62</p>
           <img src="images/bg-dots.svg" class="card-dots" alt="dots">
-          <button class="card-btn btn btn-blue">Add & Install Extension</button>
+          <button class="card-btn btn btn-blue"   >Add & Install Extension</button>
         </article>
 
         <article class="download-card">
@@ -184,7 +184,7 @@
             </svg>
           </summary>
 
-          <p class="faq-answer paragraph paragraph-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          <p class="faq-answer paragraph paragraph-tertiary"  tabindex="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Fusce tincidunt justo eget
             ultricies fringilla.
             Phasellus blandit ipsum quis quam ornare mattis.</p>
@@ -197,7 +197,7 @@
             </svg>
           </summary>
 
-          <p class="faq-answer paragraph paragraph-tertiary">Vivamus luctus eros aliquet convallis ultricies. Mauris
+          <p class="faq-answer paragraph paragraph-tertiary" tabindex="0">Vivamus luctus eros aliquet convallis ultricies. Mauris
             augue massa, ultricies non
             ligula.
             Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
@@ -212,7 +212,7 @@
             </svg>
           </summary>
 
-          <p class="faq-answer paragraph paragraph-tertiary">Sed consectetur quam id neque fermentum accumsan.
+          <p class="faq-answer paragraph paragraph-tertiary" tabindex="0">Sed consectetur quam id neque fermentum accumsan.
             Praesent
             luctus vestibulum dolor, ut
             condimentum
@@ -227,7 +227,7 @@
             </svg>
           </summary>
 
-          <p class="faq-answer paragraph paragraph-tertiary">Integer condimentum ipsum id imperdiet finibus. Vivamus
+          <p class="faq-answer paragraph paragraph-tertiary" tabindex="0" >Integer condimentum ipsum id imperdiet finibus. Vivamus
             in
             placerat mi, at euismod dui.
             Aliquam
@@ -243,10 +243,10 @@
 
       <small class="register-info">35,000+ already joined</small>
 
-      <h2 class="register-heading heading">Stay up-to-date with what we’re doing</h2>
+      <h2 class="register-heading heading" id="form-heading">Stay up-to-date with what we’re doing</h2>
 
       <form action="#" class="register-form">
-        <input class="form-input" type="email" placeholder="Enter your email address">
+        <input class="form-input" type="email" placeholder="Enter your email address" aria-labelledby="form-heading">
 
         <svg class="form-error" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
           <g fill="none" fill-rule="evenodd">
