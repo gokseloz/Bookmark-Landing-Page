@@ -474,6 +474,7 @@ body {
         border-bottom: 1px solid rgba(145, 148, 161, 0.4);
         max-width: 70rem; } }
     .features-tabs .tab {
+      outline: none;
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -481,7 +482,7 @@ body {
       padding-top: 1.5rem;
       padding-bottom: 1.5rem;
       border-top: 1px solid rgba(145, 148, 161, 0.4);
-      color: #9194a1;
+      color: rgba(37, 43, 70, 0.8);
       cursor: pointer;
       position: relative;
       transition: color .3s; }
