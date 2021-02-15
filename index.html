@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
   <header class="header">
     <div class="header-wrapper">
 
@@ -40,9 +41,9 @@
 
       <nav class="header-nav">
         <div class="header-nav-list nav-list">
-          <a href="#" class="header-nav-link nav-link" tabindex="-1" data-text="Features">Features</a>
-          <a href="#" class="header-nav-link nav-link" tabindex="-1" data-text="Pricing">Pricing</a>
-          <a href="#" class="header-nav-link nav-link" tabindex="-1" data-text="Contact">Contact</a>
+          <a href="#" class="header-nav-link nav-link" data-text="Features">Features</a>
+          <a href="#" class="header-nav-link nav-link" data-text="Pricing">Pricing</a>
+          <a href="#" class="header-nav-link nav-link" data-text="Contact">Contact</a>
         </div>
 
         <a class="header-login-link" tabindex="0">LOGIN</a>
@@ -76,9 +77,9 @@
       </div>
 
       <div class="intro-content">
-        <h1 class="intro-header heading heading-primary ">A Simple Bookmark Manager</h1>
+        <h1 class="intro-header heading heading-primary" tabindex="0">A Simple Bookmark Manager</h1>
 
-        <p class="intro-desc paragraph paragraph-primary ">A clean and simple interface to organize your favorite
+        <p class="intro-desc paragraph paragraph-primary" tabindex="0">A clean and simple interface to organize your favorite
           websites. Open a new
           browser tab and see your sites load instantly. Try it for free.
         </p>
@@ -95,9 +96,9 @@
   <section class="features">
     <div class="features-wrapper">
 
-      <h2 class="features-header heading heading-secondary">Features</h2>
+      <h2 class="features-header heading heading-secondary" tabindex="0">Features</h2>
 
-      <p class="features-desc paragraph paragraph-secondary">
+      <p class="features-desc paragraph paragraph-secondary" tabindex="0">
         Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between
         your
         devices so you can access them on the go.
@@ -115,8 +116,8 @@
         </div>
 
         <div class="feature-textWrapper">
-          <h3 class="feature-heading heading heading-secondary">Bookmark in one click</h3>
-          <p class="feature-desc paragraph paragraph-secondary">Organize your bookmarks however you like. Our simple
+          <h3 class="feature-heading heading heading-secondary" tabindex="0">Bookmark in one click</h3>
+          <p class="feature-desc paragraph paragraph-secondary" tabindex="0"  >Organize your bookmarks however you like. Our simple
             drag-and-drop interface gives you
             complete control over how you manage your favourite sites.</p>
           <button class="feature-btn btn btn-blue">More Info</button>
@@ -129,34 +130,34 @@
   <section class="downloads">
     <div class="downloads-wrapper">
 
-      <h2 class="downloads-header heading heading-secondary">Download the extension</h2>
+      <h2 class="downloads-header heading heading-secondary" tabindex="0">Download the extension</h2>
 
-      <p class="downloads-desc paragraph paragraph-secondary">
+      <p class="downloads-desc paragraph paragraph-secondary" tabindex="0">
         We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to
         prioritize.
       </p>
 
       <div class="downloads-cards-wrapper">
         <article class="download-card">
-          <img src="images/logo-chrome.svg" class="card-img" alt="logo chrome">
-          <h3 class="card-heading">Add to Chrome</h3>
-          <p class="card-desc">Minimum version 62</p>
-          <img src="images/bg-dots.svg" class="card-dots" alt="dots">
-          <button class="card-btn btn btn-blue"   >Add & Install Extension</button>
-        </article>
-
-        <article class="download-card">
-          <img src="images/logo-firefox.svg" class="card-img" alt="logo firefox">
-          <h3 class="card-heading">Add to Firefox</h3>
-          <p class="card-desc">Minimum version 55</p>
+          <img src="images/logo-chrome.svg" class="card-img" alt="logo chrome" tabindex="0">
+          <h3 class="card-heading" tabindex="0">Add to Chrome</h3>
+          <p class="card-desc" tabindex="0">Minimum version 62</p>
           <img src="images/bg-dots.svg" class="card-dots" alt="dots">
           <button class="card-btn btn btn-blue">Add & Install Extension</button>
         </article>
 
         <article class="download-card">
-          <img src="images/logo-opera.svg" class="card-img" alt="logo opera">
-          <h3 class="card-heading">Add to Opera</h3>
-          <p class="card-desc">Minimum version 46</p>
+          <img src="images/logo-firefox.svg" class="card-img" alt="logo firefox" tabindex="0">
+          <h3 class="card-heading" tabindex="0">Add to Firefox</h3>
+          <p class="card-desc" tabindex="0" >Minimum version 55</p>
+          <img src="images/bg-dots.svg" class="card-dots" alt="dots">
+          <button class="card-btn btn btn-blue">Add & Install Extension</button>
+        </article>
+
+        <article class="download-card">
+          <img src="images/logo-opera.svg" class="card-img" alt="logo opera" tabindex="0">
+          <h3 class="card-heading" tabindex="0">Add to Opera</h3>
+          <p class="card-desc" tabindex="0">Minimum version 46</p>
           <img src="images/bg-dots.svg" class="card-dots" alt="dots">
           <button class="card-btn btn btn-blue">Add & Install Extension</button>
         </article>
@@ -168,9 +169,9 @@
   <section class="faqs">
     <div class="faqs-wrapper">
 
-      <h2 class="faqs-header heading heading-secondary">Frequently Asked Questions</h2>
+      <h2 class="faqs-header heading heading-secondary" tabindex="0">Frequently Asked Questions</h2>
 
-      <p class="faqs-desc paragraph paragraph-secondary">Here are some of our FAQs. If you have any other questions
+      <p class="faqs-desc paragraph paragraph-secondary" tabindex="0">Here are some of our FAQs. If you have any other questions
         you’d like
         answered please feel
         free to email us.
@@ -178,7 +179,7 @@
 
       <div class="faqs-accordion">
         <details class="faq">
-          <summary class="faq-question">What is Bookmark?
+          <summary class="faq-question" aria-expanded="false" role="button">What is Bookmark?
             <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
               <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
             </svg>
@@ -191,7 +192,7 @@
         </details>
 
         <details class="faq">
-          <summary class="faq-question">How can I request a new browser?
+          <summary class="faq-question" aria-expanded="false" role="button">How can I request a new browser?
             <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
               <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
             </svg>
@@ -206,7 +207,7 @@
         </details>
 
         <details class="faq">
-          <summary class="faq-question">Is there a mobile app?
+          <summary class="faq-question" aria-expanded="false" role="button">Is there a mobile app?
             <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
               <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
             </svg>
@@ -221,7 +222,7 @@
         </details>
 
         <details class="faq">
-          <summary class="faq-question">What about other Chromium browsers?
+          <summary class="faq-question" aria-expanded="false" role="button">What about other Chromium browsers?
             <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
               <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
             </svg>

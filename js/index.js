@@ -1,4 +1,4 @@
-// | mobile nav | hamburger icon | accessibility | scrollDisabled | 
+// | mobile nav | hamburger icon | header section-accessibility | scrollDisabled | 
 let hamburgerIcon = document.querySelector(".header-hamburger")
 let header = document.querySelector(".header")
 let body = document.querySelector("body")
@@ -25,6 +25,23 @@ hamburgerIcon.addEventListener("click", () => {
         login.setAttribute("tabindex", "-1")
     }
 })
+
+
+// ------------------------------
+// * FAQ SECTION - ACCESSIBILITY*
+// ------------------------------
+let questions = [...document.querySelectorAll(".faq-question")]
+
+questions.forEach((question) => {
+    question.addEventListener("click", function () {
+        this.parentElement.classList.toggle("open")
+        if (this.parentElement.classList.contains("open")) {
+            this.setAttribute("aria-expanded", "true")
+        } else {
+            this.setAttribute("aria-expanded", "false")
+        }
+    })
+});
 
 // --------------------
 // * FEATURES SECTION *
@@ -125,3 +142,5 @@ input.addEventListener("invalid", (e) => {
     e.preventDefault()
     notSubmit()
 })
+
+
