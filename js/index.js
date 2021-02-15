@@ -1,33 +1,34 @@
+// | mobile nav | hamburger icon | accessibility | scrollDisabled | 
 let hamburgerIcon = document.querySelector(".header-hamburger")
 let header = document.querySelector(".header")
 let body = document.querySelector("body")
 let navLink = document.querySelectorAll(".header-nav-link")
+let login = document.querySelector(".header-login-link")
 
+hamburgerIcon.addEventListener("click", () => {
+    header.classList.toggle("nav-active")
+    body.classList.toggle("scrollDisabled")
 
-document.querySelector(".header-hamburger").addEventListener("click", () => {
-    document.querySelector(".header").classList.toggle("nav-active")
-    document.querySelector("body").classList.toggle("scrollDisabled")
-    if(document.querySelector(".header").classList.contains("nav-active")){
-        document.querySelector(".header-hamburger").setAttribute("aria-expanded","true")
-        document.querySelector(".header-hamburger").setAttribute("aria-pressed","true")
-        document.querySelectorAll(".header-nav-link").forEach((e) => {
+    if (header.classList.contains("nav-active")) {
+        hamburgerIcon.setAttribute("aria-expanded", "true")
+        hamburgerIcon.setAttribute("aria-pressed", "true")
+        navLink.forEach((e) => {
             e.setAttribute("tabindex", "0")
         })
-    }
-    else{
-        document.querySelector(".header-hamburger").setAttribute("aria-expanded","false")
-        document.querySelector(".header-hamburger").setAttribute("aria-pressed","false")
-        document.querySelectorAll(".header-nav-link").forEach((e) => {
+        login.setAttribute("tabindex", "0")
+    } else {
+        header.setAttribute("aria-expanded", "false")
+        header.setAttribute("aria-pressed", "false")
+        navLink.forEach((e) => {
             e.setAttribute("tabindex", "-1")
         })
-
-
+        login.setAttribute("tabindex", "-1")
     }
-    
-
 })
 
-
+// --------------------
+// * FEATURES SECTION *
+// --------------------
 let feature = [{
         imgSrc: './images/illustration-features-tab-1.svg',
         heading: 'Bookmark in one click',
@@ -48,66 +49,79 @@ let feature = [{
     },
 ]
 
-function changeTab(index) {
+let featureImgWrapper = document.querySelector(".feature-imgWrapper")
+let featureImg = document.querySelector(".feature-img")
+let featureTextWrapper = document.querySelector(".feature-textWrapper")
+let featureHeading = document.querySelector(".feature-heading")
+let featureDesc = document.querySelector(".feature-desc")
+let tabButtons = [...document.querySelectorAll(".tab")]
 
+function changeTab(index) {
     tabButtons.forEach((tab) => {
         tab.classList.remove("active")
     })
     tabButtons[index].classList.add("active")
 
-    document.querySelector(".feature-imgWrapper").classList.add("animAdded")
-    document.querySelector(".feature-textWrapper").classList.add("animAdded")
+    featureImgWrapper.classList.add("animAdded")
+    featureTextWrapper.classList.add("animAdded")
 
     setTimeout(() => {
-        document.querySelector(".feature-imgWrapper").classList.remove("animAdded")
-        document.querySelector(".feature-textWrapper").classList.remove("animAdded")
+        featureImgWrapper.classList.remove("animAdded")
+        featureTextWrapper.classList.remove("animAdded")
     }, 1000);
 
     setTimeout(() => {
-        document.querySelector(".feature-img").src = feature[index].imgSrc;
-        document.querySelector(".feature-heading").textContent = feature[index].heading;
-        document.querySelector(".feature-desc").textContent = feature[index].desc;
-        document.querySelector(".feature-img").alt = feature[index].altTxt;
-    }, 1000);
+        featureImg.src = feature[index].imgSrc;
+        featureImg.alt = feature[index].altTxt;
+        featureHeading.textContent = feature[index].heading;
+        featureDesc.textContent = feature[index].desc;
+    }, 800);
 }
-
-
-let tabButtons = document.querySelectorAll(".tab")
 
 tabButtons.forEach((tab) => {
     tab.addEventListener("click", function () {
-        changeTab([...tabButtons].indexOf(tab))
+        changeTab(tabButtons.indexOf(tab))
     })
 });
 
 
-document.querySelector(".register-form").addEventListener("submit", (e) => {
-    if (document.querySelector(".form-input").value == "") {
-        e.preventDefault()
+// --------------------
+// * REGISTER SECTION *
+// --------------------
+let registerForm = document.querySelector(".register-form")
+let input = document.querySelector(".form-input")
+let successText = document.querySelector(".form-success-text")
+let warningText = document.querySelector(".form-warning-text")
+let errorICon = document.querySelector(".form-error")
+
+function notSubmit() {
+    input.style.border = "2px solid hsl(0, 94%, 66%)"
+    warningText.style.display = "block"
+    errorICon.style.display = "block"
+    successText.style.display = "none"
+}
+
+registerForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    if (input.value == "") {
         notSubmit()
+
     } else {
-        e.preventDefault();
-        document.querySelector(".form-success-text").style.display = "block"
-        document.querySelector(".form-input").style.border = "2px solid #28a745"
-        document.querySelector(".form-input").value = ""
-        document.querySelector(".form-warning-text").style.display = "none"
-        document.querySelector(".form-error").style.display = "none"
+        successText.style.display = "block"
+        input.style.border = "2px solid #28a745"
+        input.value = ""
+        warningText.style.display = "none"
+        errorICon.style.display = "none"
 
         setTimeout(() => {
-            document.querySelector(".form-success").style.display = "none"
-            document.querySelector(".form-input").style.border = "none"
+            successText.style.display = "none"
+            input.style.border = "none"
         }, 1500);
     }
 })
 
-document.querySelector(".form-input").addEventListener("invalid", (e) => {
+input.addEventListener("invalid", (e) => {
     e.preventDefault()
     notSubmit()
 })
-
-function notSubmit() {
-    document.querySelector(".form-input").style.border = "2px solid hsl(0, 94%, 66%)"
-    document.querySelector(".form-warning-text").style.display = "block"
-    document.querySelector(".form-error").style.display = "block"
-    document.querySelector(".form-success-text").style.display = "none"
-}

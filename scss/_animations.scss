@@ -1,3 +1,4 @@
+// * for the image in the features section *
 @keyframes swipeIn{
     from{
         transform: translateX(-120%);
@@ -13,6 +14,7 @@
     }
 }
 
+// * for the text in the features section *
 @keyframes beVisible{
     from{
         opacity: 0;
@@ -28,6 +30,7 @@
     }
 }
 
+// * for faq answers in the faq section *
 @keyframes sweep {
     0% {
         opacity: 0;
