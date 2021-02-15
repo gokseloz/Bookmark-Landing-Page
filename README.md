@@ -20,7 +20,7 @@
 <li>Converting a nodelist to an array</li>
 <li>Usage of setTimeOut method</li>
 <li>Usage of indexOf method</li>
-<li>Form validation with Javascript</li>
+<li>Form validation with Javascript => validated email, warning and success messages and warnings icon </li>
 </ul>
 
 ## How did I do this?
