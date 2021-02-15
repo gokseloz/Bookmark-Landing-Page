@@ -78,14 +78,14 @@
     cursor: pointer;
 
     &-blue {
-        background: hsl(231, 69%, 60%);
+        background: $soft-blue;
         color: #fff;
         box-shadow: 0px 8px 5px -3px rgba(0, 0, 255, .2);
 
         &:hover {
             background: #fff;
-            color: hsl(231, 69%, 60%);
-            border: 2px solid hsl(231, 69%, 60%);
+            color: $soft-blue;
+            border: 2px solid $soft-blue;
         }
 
         @media (min-width:800px) {
@@ -100,7 +100,7 @@
 
 
         &:hover {
-            border: 2px solid hsl(229, 31%, 21%);
+            border: 2px solid $very-dark-blue;
             background: #fff;
         }
 
@@ -136,7 +136,7 @@
     .card-desc {
         margin-top: 1.2rem;
         font-size: 1.5rem;
-        color: hsl(229, 8%, 60%);
+        color: rgba($very-dark-blue, .8);
     }
 
     .card-dots {

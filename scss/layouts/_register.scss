@@ -1,7 +1,7 @@
 .register {
     display: flex;
     justify-content: center;
-    background-color: hsl(231, 69%, 60%);
+    background-color: $soft-blue;
 
     &-wrapper {
         padding-top: 8rem;

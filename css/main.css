@@ -142,7 +142,7 @@ body {
   .download-card .card-desc {
     margin-top: 1.2rem;
     font-size: 1.5rem;
-    color: #9194a1; }
+    color: rgba(37, 43, 70, 0.8); }
   .download-card .card-dots {
     margin-top: 3rem; }
   .download-card .card-btn {
