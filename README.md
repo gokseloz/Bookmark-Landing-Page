@@ -10,7 +10,7 @@
   - interactive elements must be `focusable` and have `focus styling`
     - applied: buttons, menu elements
   - interactive elements must be `activated by using a keyboard`
-    - applied: features section on tabs, faq section on questions
+    - applied: `press enter` after focusing on tabs in features section and on questions in faq sections
 - `SVG` usage and its advantage
 - Common class names and `typography`
 - How and when to use `max-width,min-width,width, max-height,min-height,height`
@@ -26,7 +26,7 @@
 - Usage of `indexOf` method
   - applied: features section => tabs
 - `Form validation` with Javascript => validated email, warning and success messages and warnings icon
-  - applied: register section
+  - applied: try valid and invalid email address in register section
 
 ## How did I do this?
 ### Technologies
