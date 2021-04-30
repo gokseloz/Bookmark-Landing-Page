@@ -21,7 +21,7 @@
         flex-direction: column;
 
         @media (min-width:800px) {
-            margin: 6rem auto 0 auto;
+            margin: 5rem auto 0 auto;
             flex-direction: row;
             border-bottom: 1px solid rgba($grayish-blue, .4);
             max-width: 70rem;
@@ -42,9 +42,14 @@
             transition: color .3s;
 
             @media (min-width:800px) {
+                padding-top: 2.5rem;
                 padding-bottom: 2.5rem;
                 border-top: none;
                 flex: 1;
+            }
+
+            &:focus{
+                border: 1px solid rgba($grayish-blue, .4);
             }
 
             &:nth-last-child(1) {
