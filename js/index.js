@@ -99,6 +99,12 @@ tabButtons.forEach((tab) => {
     tab.addEventListener("click", function () {
         changeTab(tabButtons.indexOf(tab))
     })
+    tab.addEventListener("keyup", function (e) {
+        if (e.keyCode === 13) {
+            e.preventDefault()
+            changeTab(tabButtons.indexOf(tab))
+        }
+    })
 });
 
 
@@ -142,5 +148,3 @@ input.addEventListener("invalid", (e) => {
     e.preventDefault()
     notSubmit()
 })
-
-
