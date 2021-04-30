@@ -80,7 +80,7 @@
                 width: 32%;
             }
 
-            &:hover {
+            &:hover, &:focus {
                 background: #fff;
                 color: $soft-red;
                 border: 2px solid $soft-red;
