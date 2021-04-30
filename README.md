@@ -6,6 +6,11 @@
 
 ## What did I learn from this project?
 - A few approaches for **web-accessibility**
+  - tab-index, role, aria-expanded, aria-label, aria-labelledby
+  - interactive elements must be focusable and have focus styling
+    - applied: buttons, menu elements
+  - interactive elements must be activated by using a keyboard
+    - applied: features section on tabs, faq section on questions
 - **SVG** usage and its advantage
 - Common class names and **typography**
 - How and when to use **max-width,min-width,width, max-height,min-height,height**
