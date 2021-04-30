@@ -169,7 +169,7 @@
                 box-shadow: 0px 10px 5px -3px rgba(#000, .1);
             }
 
-            &:hover {
+            &:hover, &:focus {
                 border: 2px solid $soft-red;
 
                 @media (min-width:800px) {
