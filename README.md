@@ -26,12 +26,12 @@
 - Usage of `indexOf` method
   - applied: features section => tabs
 - `Form validation` with Javascript => validated email, warning and success messages and warnings icon
-  - applied: try valid and invalid email address in register section
+  - applied: try `valid and invalid` email address in register section
 
 ## How did I do this?
 ### Technologies
 - HTML, CSS & JavaScript
-- For CSS: LESS preprocessor is applied. In order to compile LESS files to CSS, node-sass with npm is utilized
+- For CSS: SASS(SCSS) preprocessor is applied. In order to compile SCSS files to CSS, node-sass with npm is used
 - For JS: Vanilla JS is applied
 
 ### Responsivity
