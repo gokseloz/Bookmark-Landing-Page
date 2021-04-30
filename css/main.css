@@ -117,7 +117,7 @@ body {
     background: rgba(145, 148, 161, 0.1);
     color: #9194a1;
     box-shadow: 0px 8px 8px -3px rgba(0, 0, 0, 0.2); }
-    .btn-gray:hover {
+    .btn-gray:hover, .btn-gray:focus {
       border: 2px solid #252b46;
       background: #fff; }
     @media (min-width: 800px) {
@@ -353,10 +353,10 @@ body {
           margin-top: 0;
           font-size: 1.4rem;
           box-shadow: 0px 10px 5px -3px rgba(0, 0, 0, 0.1); } }
-      .header-nav .header-login-link:hover {
+      .header-nav .header-login-link:hover, .header-nav .header-login-link:focus {
         border: 2px solid #8c3b75; }
         @media (min-width: 800px) {
-          .header-nav .header-login-link:hover {
+          .header-nav .header-login-link:hover, .header-nav .header-login-link:focus {
             background-color: #fff;
             color: #8c3b75; } }
     .header-nav-social {
@@ -469,7 +469,7 @@ body {
     flex-direction: column; }
     @media (min-width: 800px) {
       .features-tabs {
-        margin: 6rem auto 0 auto;
+        margin: 5rem auto 0 auto;
         flex-direction: row;
         border-bottom: 1px solid rgba(145, 148, 161, 0.4);
         max-width: 70rem; } }
@@ -488,9 +488,12 @@ body {
       transition: color .3s; }
       @media (min-width: 800px) {
         .features-tabs .tab {
+          padding-top: 2.5rem;
           padding-bottom: 2.5rem;
           border-top: none;
           flex: 1; } }
+      .features-tabs .tab:focus {
+        border: 1px solid rgba(145, 148, 161, 0.4); }
       .features-tabs .tab:nth-last-child(1) {
         border-bottom: 1px solid rgba(145, 148, 161, 0.4); }
         @media (min-width: 800px) {
@@ -680,7 +683,7 @@ body {
       color: #252b46;
       transition: color .3s;
       cursor: pointer; }
-      .faqs-accordion .faq-question:hover {
+      .faqs-accordion .faq-question:hover, .faqs-accordion .faq-question:focus {
         color: #8c3b75; }
       .faqs-accordion .faq-question::-webkit-details-marker {
         display: none; }
@@ -752,7 +755,7 @@ body {
         .register-form .form-btn {
           margin-top: 0;
           width: 32%; } }
-      .register-form .form-btn:hover {
+      .register-form .form-btn:hover, .register-form .form-btn:focus {
         background: #fff;
         color: #8c3b75;
         border: 2px solid #8c3b75; }
