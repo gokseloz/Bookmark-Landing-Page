@@ -61,6 +61,8 @@ body {
   @media (min-width: 800px) {
     .header-hamburger {
       display: none; } }
+  .header-hamburger:focus {
+    border: 1px solid rgba(145, 148, 161, 0.4); }
   .header-hamburger .line {
     width: 18px;
     height: 3px;
