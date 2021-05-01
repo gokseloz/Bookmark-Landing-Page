@@ -2,30 +2,32 @@
 let hamburgerIcon = document.querySelector(".header-hamburger")
 let header = document.querySelector(".header")
 let body = document.querySelector("body")
+let nav = document.querySelector(".header-nav")
 let navLink = document.querySelectorAll(".header-nav-link")
+let navSocialLink = document.querySelectorAll(".nav-social-link")
 let login = document.querySelector(".header-login-link")
+
+if(window.innerWidth < 800){
+    navLink.forEach(link => link.setAttribute("tabindex", "-1"))
+    login.setAttribute("tabindex", "-1")
+}
 
 hamburgerIcon.addEventListener("click", () => {
     header.classList.toggle("nav-active")
-    body.classList.toggle("scrollDisabled")
+    body.classList.toggle("scrollDisabled") 
 
-    if (header.classList.contains("nav-active")) {
-        hamburgerIcon.setAttribute("aria-expanded", "true")
-        hamburgerIcon.setAttribute("aria-pressed", "true")
-        navLink.forEach((e) => {
-            e.setAttribute("tabindex", "0")
-        })
+    hamburgerIcon.getAttribute("aria-expanded") === "false" ? hamburgerIcon.setAttribute("aria-expanded", "true") : hamburgerIcon.setAttribute("aria-expanded", "false")
+    hamburgerIcon.getAttribute("aria-pressed") === "false" ? hamburgerIcon.setAttribute("aria-pressed", "true") : hamburgerIcon.setAttribute("aria-pressed", "false")
+
+    if(header.classList.contains("nav-active")) {
+        navLink.forEach(link => link.setAttribute("tabindex", "0"))
         login.setAttribute("tabindex", "0")
-    } else {
-        header.setAttribute("aria-expanded", "false")
-        header.setAttribute("aria-pressed", "false")
-        navLink.forEach((e) => {
-            e.setAttribute("tabindex", "-1")
-        })
+    }
+    else {
+        navLink.forEach(link => link.setAttribute("tabindex", "-1"))
         login.setAttribute("tabindex", "-1")
     }
 })
-
 
 // ------------------------------
 // * FAQ SECTION - ACCESSIBILITY*
@@ -35,18 +37,15 @@ let questions = [...document.querySelectorAll(".faq-question")]
 questions.forEach((question) => {
     question.addEventListener("click", function () {
         this.parentElement.classList.toggle("open")
-        if (this.parentElement.classList.contains("open")) {
-            this.setAttribute("aria-expanded", "true")
-        } else {
-            this.setAttribute("aria-expanded", "false")
-        }
+        this.getAttribute("aria-expanded") === "false" ? this.setAttribute("aria-expanded", "true") : this.setAttribute("aria-expanded", "false")
     })
 });
 
 // --------------------
 // * FEATURES SECTION *
 // --------------------
-let feature = [{
+let feature = [
+    {
         imgSrc: './images/illustration-features-tab-1.svg',
         heading: 'Bookmark in one click',
         desc: 'Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.',
