@@ -123,7 +123,9 @@ let errorICon = document.querySelector(".form-error")
 
 function notSubmit() {
     input.style.border = "2px solid hsl(0, 94%, 66%)"
+    input.setAttribute("aria-invalid", "true")
     warningText.style.display = "block"
+    warningText.setAttribute("role", "alert")
     errorICon.style.display = "block"
     successText.style.display = "none"
 }
@@ -136,8 +138,10 @@ registerForm.addEventListener("submit", (e) => {
 
     } else {
         successText.style.display = "block"
+        successText.setAttribute("role", "status")
         input.style.border = "2px solid #28a745"
         input.value = ""
+        input.setAttribute("aria-invalid", "false")
         warningText.style.display = "none"
         errorICon.style.display = "none"
 
