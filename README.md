@@ -6,7 +6,7 @@
 
 ## What did I learn from this project?
 - A few approaches for `web-accessibility`
-  - `tab-index, role, aria-expanded, aria-label, aria-labelledby`
+  - `tab-index, role, aria-expanded, aria-label, aria-labelledby, aria-invalid, aria-controls, aria-selected`
   - interactive elements must be `focusable` and have `focus styling`
     - applied: buttons, menu elements
   - interactive elements must be `activated by using a keyboard`
